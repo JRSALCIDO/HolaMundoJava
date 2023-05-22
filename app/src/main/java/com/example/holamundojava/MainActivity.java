@@ -1,5 +1,6 @@
 package com.example.holamundojava;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,9 +14,12 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnSaludar;
+    private Button btnLimpiar;
+    private Button btnFin;
     private EditText txtNombre;
     private TextView lblSaludo;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         btnSaludar = findViewById(R.id.btnSaludo);
+        btnLimpiar = findViewById(R.id.btnLimpiar);
+        btnFin = findViewById(R.id.btnFin);
         txtNombre = findViewById(R.id.txtSaludo2);
         lblSaludo = findViewById(R.id.lblSaludo);
 
@@ -38,5 +44,23 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        btnLimpiar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                txtNombre.setText("");
+                lblSaludo.setText("");
+            }
+
+                }
+        );
+        btnFin.setOnClickListener(new View.OnClickListener(){
+                                          @Override
+                                          public void onClick(View view){
+                                              finish();
+                                          }
+
+                                      }
+        );
+
     }
 }

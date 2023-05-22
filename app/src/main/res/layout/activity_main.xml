@@ -29,17 +29,32 @@
             android:layout_height="wrap_content"
             android:id="@+id/lblSaludo"
             />
+
         <EditText
             android:id="@+id/txtSaludo2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            tools:ignore="TextFields" />
+            tools:ignore="TextFields,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         <Button
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:id="@+id/btnSaludo"
             android:text="@string/pulsame"
+
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btnLimpiar"
+            android:text="@string/limpiar"
+
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btnFin"
+            android:text="@string/fin"
 
             />
     </LinearLayout>
